@@ -56,6 +56,11 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtra(AddEditNoteActivity.EXTRA_PRIORITY,note.getPriority());
                 startActivityForResult(intent,EDIT_NOTE_REQUEST);
             }
+
+            @Override
+            public void onLongItemClick(Note note) {
+                Toast.makeText(MainActivity.this, "onlongclick", Toast.LENGTH_SHORT).show();
+            }
         });
     }
 
